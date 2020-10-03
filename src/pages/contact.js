@@ -1,5 +1,9 @@
 import React from "react"
 
-const ContactPage = () => <p>Welcome to page 2</p>
+const ContactPage = () => (
+  <>
+    <h1>Hello</h1>
+  </>
+)
 
 export default ContactPage

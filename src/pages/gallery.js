@@ -1,5 +1,9 @@
 import React from "react"
 
-const GalleryPage = () => <p>Welcome to page 2</p>
+const GalleryPage = () => (
+  <>
+    <h1>Hello</h1>
+  </>
+)
 
 export default GalleryPage

@@ -7,28 +7,26 @@ import {
   NavigationListItem,
 } from "./NavigationStyles"
 
-const Navigation = () => {
-  return (
-    <NavigationWrapper>
-      <Logo>
-        <Link to="">HATTA</Link>
-      </Logo>
-      <NavigationList>
-        <NavigationListItem>
-          <Link to="articles">articles</Link>
-        </NavigationListItem>
-        <NavigationListItem>
-          <Link to="about">about</Link>
-        </NavigationListItem>
-        <NavigationListItem>
-          <Link to="gallery">gallery</Link>
-        </NavigationListItem>
-        <NavigationListItem>
-          <Link to="contact">contact</Link>
-        </NavigationListItem>
-      </NavigationList>
-    </NavigationWrapper>
-  )
-}
+const Navigation = () => (
+  <NavigationWrapper>
+    <Logo>
+      <Link to="/">HATTA</Link>
+    </Logo>
+    <NavigationList>
+      <NavigationListItem>
+        <Link to="/articles">articles</Link>
+      </NavigationListItem>
+      <NavigationListItem>
+        <Link to="/about">about</Link>
+      </NavigationListItem>
+      <NavigationListItem>
+        <Link to="/gallery">gallery</Link>
+      </NavigationListItem>
+      <NavigationListItem>
+        <Link to="/contact">contact</Link>
+      </NavigationListItem>
+    </NavigationList>
+  </NavigationWrapper>
+)
 
 export default Navigation

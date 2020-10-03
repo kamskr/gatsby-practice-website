@@ -1,9 +1,12 @@
 import React from "react"
-import Navigation from "../components/Navigation/Navigation"
 
 const IndexPage = () => (
   <>
-    <Navigation />
+    <h1>hello Hatta</h1>
+    <h1>hello Hatta</h1>
+    <h1>hello Hatta</h1>
+    <h1>hello Hatta</h1>
+    <h1>hello Hatta</h1>
   </>
 )
 
