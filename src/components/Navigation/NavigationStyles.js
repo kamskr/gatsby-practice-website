@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
 export const NavigationWrapper = styled.nav`
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  margin: 20px 30px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -18,8 +22,6 @@ export const Logo = styled.span`
 `
 
 export const NavigationList = styled.ul`
-  margin: 0;
-  padding: 0;
   list-style: none;
   display: flex;
 `
