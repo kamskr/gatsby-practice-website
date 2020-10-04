@@ -1,9 +1,10 @@
-import React from "react"
+import React from 'react';
 
 const GalleryPage = () => (
   <>
-    <h1>Hello</h1>
+    <h1>Blog page</h1>
+    <p>Welcome to my blog</p>
   </>
-)
+);
 
-export default GalleryPage
+export default GalleryPage;

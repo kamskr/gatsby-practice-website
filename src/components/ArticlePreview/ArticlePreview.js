@@ -1,17 +1,15 @@
-import React from "react"
-import styled from "styled-components"
-import Image from "gatsby-image"
-import { Link } from "gatsby"
+import React from 'react';
+import styled from 'styled-components';
+import Image from 'gatsby-image';
+import { Link } from 'gatsby';
 
 const PreviewWrapper = styled(Link)`
-  display: block;
+  display: black;
   position: relative;
   width: 100%;
   height: 340px;
   background-color: hsl(0, 0%, 95%);
-  background-image: url(${({ background }) => background});
-  background-size: cover;
-`
+`;
 
 const PreviewInfoLabel = styled.div`
   position: absolute;
@@ -27,21 +25,21 @@ const PreviewInfoLabel = styled.div`
   p {
     margin: 5px;
   }
-`
+`;
+
 const StyledImage = styled(Image)`
   width: 100%;
   height: 100%;
   object-fit: cover;
-`
+`;
 
-const Preview = ({ title, slug, excerpt, image }) => (
+const Preview = ({ title, excerpt, image, slug }) => (
   <PreviewWrapper to={`/articles/${slug}`}>
     <StyledImage fluid={image} />
     <PreviewInfoLabel>
       <h2>{title}</h2>
-      <p>{excerpt}</p>
     </PreviewInfoLabel>
   </PreviewWrapper>
-)
+);
 
-export default Preview
+export default Preview;
