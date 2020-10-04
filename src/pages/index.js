@@ -7,10 +7,8 @@ export const query = graphql`
   {
     file(name: { eq: "hero" }) {
       childImageSharp {
-        fluid(maxWidth: 800, maxHeight: 1200, quality: 100) {
-          src
-          srcSet
-          sizes
+        fluid(maxWidth: 1000, maxHeight: 1200, quality: 100) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -26,11 +24,7 @@ const IndexPage = ({ data }) => (
       </p>
       <Button>estimate project</Button>
     </ContentWrapper>
-    <ImageWrapper
-      src={data.file.childImageSharp.fluid.src}
-      srcSet={data.file.childImageSharp.fluid.srcSet}
-      sizes={data.file.childImageSharp.fluid.sizes}
-    />
+    <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
 )
 

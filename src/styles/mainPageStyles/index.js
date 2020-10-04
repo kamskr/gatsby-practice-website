@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Image from "gatsby-image"
 
 export const ContentWrapper = styled.div`
   width: 65%;
@@ -21,8 +22,8 @@ export const ContentWrapper = styled.div`
   }
 `
 
-export const ImageWrapper = styled.img`
-  position: absolute;
+export const ImageWrapper = styled(Image)`
+  position: absolute !important;
   top: 0;
   right: 0;
   width: 35%;
