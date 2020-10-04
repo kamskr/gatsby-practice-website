@@ -27,8 +27,10 @@ const ArticlesPage = ({ data }) => {
           ({ excerpt, frontmatter: { title, slug, featuredImage } }) => (
             <ArticlePreview
               title={title}
+              slug={slug}
               excerpt={excerpt}
               image={featuredImage.childImageSharp.fluid}
+              key={slug}
             />
           )
         )}
