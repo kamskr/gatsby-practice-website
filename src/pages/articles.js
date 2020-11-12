@@ -16,13 +16,13 @@ const pageData = {
   paragraph: `While artists work from real to the abstract, architects must work from the abstract to the real.`,
 };
 
-const ArticlesPage = ({ data }) => {
-  const {
-    allDatoCmsArticle: { nodes },
-  } = data;
+const ArticlesPage = () => {
+  // const {
+  //   allDatoCmsArticle: { nodes },
+  // } = data;
   return (
     <>
-      <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
+      {/* <PageInfo title={pageData.title} paragraph={pageData.paragraph} />
       <ArticlesWrapper>
         {nodes.map(({ title, featuredImage }) => (
           <ArticlePreview
@@ -32,24 +32,24 @@ const ArticlesPage = ({ data }) => {
             slug={slugify(title, { lower: true })}
           />
         ))}
-      </ArticlesWrapper>
+      </ArticlesWrapper> */}
     </>
   );
 };
 
-export const query = graphql`
-  {
-    allDatoCmsArticle {
-      nodes {
-        title
-        featuredImage {
-          fluid(maxWidth: 500) {
-            ...GatsbyDatoCmsFluid_tracedSVG
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   {
+//     allDatoCmsArticle {
+//       nodes {
+//         title
+//         featuredImage {
+//           fluid(maxWidth: 500) {
+//             ...GatsbyDatoCmsFluid_tracedSVG
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;
 
 export default ArticlesPage;

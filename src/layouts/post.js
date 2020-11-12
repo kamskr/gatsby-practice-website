@@ -2,42 +2,42 @@ import React from "react"
 import Image from "gatsby-image"
 import { graphql } from "gatsby"
 
-export const query = graphql`
-  query querySingleArticle($id: String!) {
-    datoCmsArticle(id: { eq: $id }) {
-      title
-      featuredImage {
-        fixed(width: 500) {
-          ...GatsbyDatoCmsFixed_tracedSVG
-        }
-      }
-      author
-      articleContent {
-        ... on DatoCmsParagraph {
-          paragraphContent
-          id
-        }
-        ... on DatoCmsHeading {
-          headingContent
-          id
-        }
-        ... on DatoCmsArticleImage {
-          imageData {
-            fixed(width: 500) {
-              ...GatsbyDatoCmsFixed_tracedSVG
-            }
-          }
-          id
-        }
-      }
-    }
-  }
-`
+// export const query = graphql`
+//   query querySingleArticle($id: String!) {
+//     datoCmsArticle(id: { eq: $id }) {
+//       title
+//       featuredImage {
+//         fixed(width: 500) {
+//           ...GatsbyDatoCmsFixed_tracedSVG
+//         }
+//       }
+//       author
+//       articleContent {
+//         ... on DatoCmsParagraph {
+//           paragraphContent
+//           id
+//         }
+//         ... on DatoCmsHeading {
+//           headingContent
+//           id
+//         }
+//         ... on DatoCmsArticleImage {
+//           imageData {
+//             fixed(width: 500) {
+//               ...GatsbyDatoCmsFixed_tracedSVG
+//             }
+//           }
+//           id
+//         }
+//       }
+//     }
+//   }
+// `
 
-const PostLayout = ({ data }) => {
+const PostLayout = () => {
   return (
     <div>
-      <h1>{data.datoCmsArticle.title}</h1>
+      {/* <h1>{data.datoCmsArticle.title}</h1>
       <p>{data.datoCmsArticle.author}</p>
       <Image fixed={data.datoCmsArticle.featuredImage.fixed} />
       <div>
@@ -55,7 +55,7 @@ const PostLayout = ({ data }) => {
               return null
           }
         })}
-      </div>
+      </div> */}
     </div>
   )
 }
