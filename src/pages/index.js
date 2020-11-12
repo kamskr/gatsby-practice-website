@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 import Image from 'gatsby-image';
 import Button from '../components/Button/Button';
+import Search from "../components/Search/Search"
 
 const ContentWrapper = styled.div`
   width: 60%;
@@ -44,6 +45,7 @@ const IndexPage = ({ data }) => (
         the abstract to the real.
       </p>
       <Button>estimate project</Button>
+      <div style={{ marginTop: 100 }}>    <Search /></div>
     </ContentWrapper>
     <ImageWrapper fluid={data.file.childImageSharp.fluid} />
   </>
